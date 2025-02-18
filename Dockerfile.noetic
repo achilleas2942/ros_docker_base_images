@@ -1,0 +1,28 @@
+# Use ROS Noetic image
+FROM ros:noetic-ros-core-focal
+
+# Install required dependencies
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    build-essential python3-rosdep python3-pip \
+    curl ca-certificates gnupg lsb-release wget udev \
+    git libeigen3-dev libusb-1.0-0-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install ROS base
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    ros-noetic-ros-base \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set up catkin workspace
+WORKDIR /root/catkin_ws
+RUN mkdir -p src
+
+# Optimize shell history to reduce image size
+RUN echo 'export HISTSIZE=0' >> /etc/bash.bashrc
+
+# Source ROS setup files automatically
+RUN echo "source /opt/ros/noetic/setup.bash" >> /root/.bashrc && \
+    echo "source /root/catkin_ws/devel/setup.bash" >> /root/.bashrc
+
+# Default command
+CMD ["bash"]
