@@ -8,7 +8,7 @@ This repository provides lightweight and optimized Docker images for different R
 These images serve as **minimal base images** to create customized Docker containers for various robotic applications.
 
 ## 1. What's Included?
-These images are built with **only essential dependencies**, making them lightweight and efficient:
+These images are built with **only essential dependencies**, making them lightweight and efficient:  
 ✅ **Base ROS installation** (Core + essential communication libraries)  
 ✅ `build-essential` for compiling ROS packages  
 ✅ `python3-rosdep` for managing dependencies (Python 2 for Melodic)  
