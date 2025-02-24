@@ -9,13 +9,13 @@ These images serve as **minimal base images** to create customized Docker contai
 
 ## 1. What's Included?
 These images are built with **only essential dependencies**, making them lightweight and efficient:
-- ✅ **Base ROS installation** (Core + essential communication libraries)
-- ✅ `build-essential` for compiling ROS packages
-- ✅ `python3-rosdep` for managing dependencies (Python 2 for Melodic)
-- ✅ `python3-pip` (or `python-pip` for Melodic) for Python package management
-- ✅ `curl`, `git`, `ca-certificates`, `gnupg`, `lsb-release` for secure package downloads
-- ✅ `udev` for USB device access (if needed)
-- ✅ **Catkin/Colcon workspace setup** (`catkin_ws` for ROS 1, `ros2_ws` for ROS 2)
+✅ **Base ROS installation** (Core + essential communication libraries)
+✅ `build-essential` for compiling ROS packages
+✅ `python3-rosdep` for managing dependencies (Python 2 for Melodic)
+✅ `python3-pip` (or `python-pip` for Melodic) for Python package management
+✅ `curl`, `git`, `ca-certificates`, `gnupg`, `lsb-release` for secure package downloads
+✅ `udev` for USB device access (if needed)
+✅ **Catkin/Colcon workspace setup** (`catkin_ws` for ROS 1, `ros2_ws` for ROS 2)
 
 These images **do not include unnecessary tools** like Rviz, Gazebo, or large libraries unless explicitly required.
 
