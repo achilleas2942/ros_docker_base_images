@@ -75,11 +75,11 @@ RUN rosdep update && rosdep install --from-paths /root/catkin_ws/src --ignore-sr
 Instead of adding static commands in the `Dockerfile`, **use an `entrypoint.sh` script** to dynamically configure the container at runtime.
 
 A typical **entrypoint script** can:
-- ✅ Source the ROS environment
-- ✅ Set environment variables like `ROS_MASTER_URI` and `ROS_IP`
-- ✅ Clone or update repositories
-- ✅ Build the workspace
-- ✅ Run ROS launch files or other startup scripts
+✅ Source the ROS environment  
+✅ Set environment variables like `ROS_MASTER_URI` and `ROS_IP`  
+✅ Clone or update repositories  
+✅ Build the workspace  
+✅ Run ROS launch files or other startup scripts  
 
 ### Example `entrypoint.sh`
 ```bash
@@ -130,6 +130,6 @@ docker run --rm -it my_ros_image roslaunch my_robot bringup.launch
 ---
 
 ## Summary
-- ✅ **Use `FROM achilleas2942/ros:noetic` (or `melodic`, `humble`) as a base**  
-- ✅ **Only install necessary dependencies to keep images lightweight**  
-- ✅ **Use an entrypoint script to pull repositories, set up the workspace, and launch applications dynamically**  
+✅ **Use `FROM achilleas2942/ros:noetic` (or `melodic`, `humble`) as a base**  
+✅ **Only install necessary dependencies to keep images lightweight**  
+✅ **Use an entrypoint script to pull repositories, set up the workspace, and launch applications dynamically**  
