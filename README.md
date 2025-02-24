@@ -74,7 +74,7 @@ RUN rosdep update && rosdep install --from-paths /root/catkin_ws/src --ignore-sr
 ## 4. Using an Entrypoint Script for Dynamic Configuration
 Instead of adding static commands in the `Dockerfile`, **use an `entrypoint.sh` script** to dynamically configure the container at runtime.
 
-A typical **entrypoint script** can:
+A typical **entrypoint script** can:  
 ✅ Source the ROS environment  
 ✅ Set environment variables like `ROS_MASTER_URI` and `ROS_IP`  
 ✅ Clone or update repositories  
